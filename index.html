@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+    .bg0{
+        background-image: url(./img/main_gms.jpg);
+    }
+    .bg1{
+        background-image: url(./img/main_img_yys.jpg);
+    }
+    .bg2{
+        background-image: url(./img/main_jjh.jpg);
+    }
+    .bg3{
+        background-image: url(./img/main_pyj.jpg);
+    }
+    .bg4{
+        background-image: url(./img/main_yjy.jpg);
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .swiper-slide-active{
+
+    }
+    .swiper-pagination-bullet{
+        width: auto !important;
+        height: auto !important;
+        border-radius: 0 !important;
+        background-color: white !important;
+        opacity: 1 !important;
+
+    }
+    .swiper-pagination-bullet-active{
+
+        color: rgb(230, 77, 103);
+        background-color: black !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <section id="yswiper">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide bg0">Slide 1</div>
+          <div class="swiper-slide bg1">Slide 2</div>
+          <div class="swiper-slide bg2">Slide 3</div>
+          <div class="swiper-slide bg3">Slide 4</div>
+          <div class="swiper-slide bg4">Slide 5</div>
+          
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+  </section>
+  
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    const bannerText = ["구스토스 콜라보", "어글리어스", "사이다 콜라보","당신의 채소한알","못생긴 토마토"]
+    var swiper = new Swiper("#yswiper .mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: "#yswiper .swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return `<span class=  "${className}" >  ${bannerText[index]} </span>`
+           //화면에 내보내겠다//
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>
