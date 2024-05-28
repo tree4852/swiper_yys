@@ -61,9 +61,9 @@
 
     }
     .swiper-pagination-bullet{
-        width: auto !important;
+        width: 16px !important;
         height: auto !important;
-        border-radius: 0 !important;
+        border-radius: 20px !important;
         background-color: white !important;
         opacity: 1 !important;
 
@@ -99,7 +99,7 @@
 
   <!-- Initialize Swiper -->
   <script>
-    const bannerText = ["구스토스 콜라보", "어글리어스", "사이다 콜라보","당신의 채소한알","못생긴 토마토"]
+    // const bannerText = ["구스토스 콜라보", "어글리어스", "사이다 콜라보","당신의 채소한알","못생긴 토마토"]
     var swiper = new Swiper("#yswiper .mySwiper", {
       spaceBetween: 30,
       centeredSlides: true,
@@ -112,7 +112,7 @@
         el: "#yswiper .swiper-pagination",
         clickable: true,
         renderBullet: function (index, className) {
-          return `<span class=  "${className}" >  ${bannerText[index]} </span>`
+          return `<span class=  "${className}" >  ${index + 1} </span>`
            //화면에 내보내겠다//
         },
       },
