@@ -28,50 +28,76 @@
     }
     .bg0{
         background-image: url(./img/main_gms.jpg);
+        
     }
     .bg1{
-        background-image: url(./img/main_img_yys.jpg);
+        background-image: url(./img/main_yys.jpg);
+        
     }
     .bg2{
         background-image: url(./img/main_jjh.jpg);
+        
     }
     .bg3{
         background-image: url(./img/main_pyj.jpg);
+        
     }
     .bg4{
         background-image: url(./img/main_yjy.jpg);
+        
+        
     }
 
     .swiper {
       width: 100%;
       height: 100%;
+      margin: 30px 0;
+      padding: 30px 0;
     }
 
     .swiper-slide {
+        overflow: hidden;
+        border-radius: 20px;
         text-align: center;
         justify-content: center;
         align-items: center;
         display: flex;
-        height: 100vh;
+        height: 400px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        margin-top: 92px;
+        
     }
     .swiper-slide-active{
+        /* transform: scale(1.2) !important; */
+        height:600px !important;
+        margin: 0;
+        width: 1400px !important;
 
     }
+    .swiper-pagination{
+        bottom: 0px !important;
+    }
+
     .swiper-pagination-bullet{
-        width: auto !important;
-        height: auto !important;
-        border-radius: 0 !important;
-        background-color: white !important;
+        position: unset !important;
+        width: 17px !important;
+        height: 18px !important;
+        border-radius: 60px !important;
+        background-color: #D9D9D9;
         opacity: 1 !important;
+        z-index: 100;
+        
+
 
     }
     .swiper-pagination-bullet-active{
-
-        color: rgb(230, 77, 103);
-        background-color: black !important;
+        background-color: #797979;
+        opacity: 1 !important;
+        
+        
+        
     }
   </style>
 </head>
@@ -99,22 +125,21 @@
 
   <!-- Initialize Swiper -->
   <script>
-    const bannerText = ["구스토스 콜라보", "어글리어스", "사이다 콜라보","당신의 채소한알","못생긴 토마토"]
+    
     var swiper = new Swiper("#yswiper .mySwiper", {
-      spaceBetween: 30,
+      spaceBetween: 74,
+      slidesPerView: 1.3,
+      
       centeredSlides: true,
       loop: true,
       autoplay: {
-        delay: 2500,
+        delay: 6500,
         disableOnInteraction: false,
       },
       pagination: {
         el: "#yswiper .swiper-pagination",
         clickable: true,
-        renderBullet: function (index, className) {
-          return `<span class=  "${className}" >  ${bannerText[index]} </span>`
-           //화면에 내보내겠다//
-        },
+        
       },
     });
   </script>
