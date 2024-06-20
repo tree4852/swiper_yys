@@ -10,6 +10,7 @@
 
   <!-- Demo styles -->
   <style>
+
     html,
     body {
       position: relative;
@@ -26,37 +27,38 @@
       margin: 0;
       padding: 0;
     }
+    #yswiper{
+      overflow: hidden;
+      margin-top: 4.8rem;
+    }
+    #yswiper .main_caver{
+      position: relative;
+      width: 120rem;
+      margin: 0 auto !important;
+      height: 100%;
+    }
+
+
     .bg0{
         background-image: url(./img/main_gms.jpg);
-        
     }
     .bg1{
         background-image: url(./img/main_yys.jpg);
-        
     }
     .bg2{
-        background-image: url(./img/main_jjh.jpg);
-        
+        background-image: url(./img/main_jjh.jpg); 
     }
     .bg3{
-        background-image: url(./img/main_pyj.jpg);
-        
+        background-image: url(./img/main_pyj.jpg); 
     }
     .bg4{
         background-image: url(./img/main_yjy.jpg);
         
         
+        
     }
-
-    .swiper {
-      width: 100%;
-      height: 100%;
-      margin: 30px 0;
-      padding: 30px 0;
-    }
-
-    .swiper-slide {
-        overflow: hidden;
+    .bs{
+      
         border-radius: 20px;
         text-align: center;
         justify-content: center;
@@ -67,14 +69,37 @@
         background-repeat: no-repeat;
         background-size: cover;
         margin-top: 92px;
-        
+
     }
+    .swiper-slide-active,
+    bs
+    {
+      height: 600px;
+      
+    }
+
+    #yswiper ov{
+      width: 100%;
+      height: 100%;
+      margin: 30px 0;
+      padding: 30px 0;
+      overflow: visible !important;
+      
+    }
+
+    .swiper{
+      overflow: visible;
+    }
+
+    
     .swiper-slide-active{
         /* transform: scale(1.2) !important; */
         height:600px !important;
-        margin: 0;
+        /* margin: 0;
         width: 1400px !important;
-
+        transition:  0.9s; */
+        
+        
     }
     .swiper-pagination{
         bottom: 0px !important;
@@ -105,17 +130,32 @@
 <body>
   <!-- Swiper -->
   <section id="yswiper">
-    <div class="swiper mySwiper">
+    <div class="main_caver">
+      <div class="swiper ov mySwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide bg0">Slide 1</div>
-          <div class="swiper-slide bg1">Slide 2</div>
-          <div class="swiper-slide bg2">Slide 3</div>
-          <div class="swiper-slide bg3">Slide 4</div>
-          <div class="swiper-slide bg4">Slide 5</div>
+          <div class="swiper-slide">
+            <div class="bg0 bs">Slide 1</div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg1 bs">Slide 1</div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg2 bs">Slide 1</div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg3 bs">Slide 1</div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg4 bs">Slide 1</div>
+          </div>
+          
           
         </div>
-        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-pagination"></div> -->
       </div>
+
+    </div>
+    
 
   </section>
   
@@ -132,6 +172,7 @@
       
       centeredSlides: true,
       loop: true,
+      // loopAdditionalSlides :6,
       autoplay: {
         delay: 6500,
         disableOnInteraction: false,
